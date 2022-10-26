@@ -25,3 +25,34 @@ code {
     'Courier New',
     monospace;
 }
+
+.calc-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 40vw;
+  height: 50vh;
+  text-align: center;
+}
+
+.action {
+  background-color: rgb(255, 145, 0);
+  cursor: pointer;
+}
+
+.result {
+  background-color: grey;
+  color: white;
+  text-align: right;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.num {
+  background-color: antiquewhite;
+  cursor: pointer;
+}
