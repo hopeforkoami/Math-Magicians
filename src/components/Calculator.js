@@ -1,8 +1,30 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
 
 // eslint-disable-next-line
 class Calculator extends Component {
+  constructor() {
+    super();
+    this.state = {
+      total: 0,
+      next: '',
+      operation: '',
+    };
+  }
+
+  actionHandler = (e) => {
+    const calcul = calculate(this.state, e.target.value);
+    this.setState(calcul);
+  }
+
+  renderTdElement = (classValue, valeur, action) => (
+    <td className={classValue}>
+      <button type="button" value={valeur} onClick={action}>{valeur}</button>
+    </td>
+  )
+
   render() {
+    const { total, operation, next } = this.state;
     return (
       <div>
         <div className="calc-container">
@@ -10,39 +32,42 @@ class Calculator extends Component {
             <tbody>
               <tr>
                 <td colSpan={4} className="result">
-                  0
+                  {total}
+                  {operation}
+                  {next}
                 </td>
               </tr>
               <tr>
-                <td className="num">AC</td>
-                <td className="num">+/-</td>
-                <td className="num">%</td>
-                <td className="action">÷</td>
+                {this.renderTdElement('num', 'AC', this.actionHandler)}
+                {this.renderTdElement('num', '+/-', this.actionHandler)}
+                {this.renderTdElement('num', '%', this.actionHandler)}
+                {this.renderTdElement('action', '÷', this.actionHandler)}
               </tr>
               <tr>
-                <td className="num">7</td>
-                <td className="num">8</td>
-                <td className="num">9</td>
-                <td className="action">x</td>
+                {this.renderTdElement('num', '7', this.actionHandler)}
+                {this.renderTdElement('num', '8', this.actionHandler)}
+                {this.renderTdElement('num', '9', this.actionHandler)}
+                {this.renderTdElement('action', 'x', this.actionHandler)}
               </tr>
               <tr>
-                <td className="num">4</td>
-                <td className="num">5</td>
-                <td className="num">6</td>
-                <td className="action">-</td>
+                {this.renderTdElement('num', '4', this.actionHandler)}
+                {this.renderTdElement('num', '5', this.actionHandler)}
+                {this.renderTdElement('num', '6', this.actionHandler)}
+                {this.renderTdElement('action', '-', this.actionHandler)}
               </tr>
               <tr>
-                <td className="num">1</td>
-                <td className="num">2</td>
-                <td className="num">3</td>
-                <td className="action">+</td>
+                {this.renderTdElement('num', '1', this.actionHandler)}
+                {this.renderTdElement('num', '2', this.actionHandler)}
+                {this.renderTdElement('num', '3', this.actionHandler)}
+                {this.renderTdElement('action', '+', this.actionHandler)}
               </tr>
               <tr>
                 <td className="num" colSpan={2}>
-                  0
+                  <button type="button" value="0" onClick={this.actionHandler}>0</button>
+
                 </td>
-                <td className="num">.</td>
-                <td className="action">=</td>
+                {this.renderTdElement('num', '.', this.actionHandler)}
+                {this.renderTdElement('action', '=', this.actionHandler)}
               </tr>
             </tbody>
           </table>

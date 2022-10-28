@@ -16,6 +16,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: inherit;
+}
+
 code {
   font-family:
     source-code-pro,
