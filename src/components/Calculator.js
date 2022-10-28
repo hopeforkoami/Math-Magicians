@@ -63,7 +63,8 @@ class Calculator extends Component {
               </tr>
               <tr>
                 <td className="num" colSpan={2}>
-                  0
+                  <button type="button" value="0" onClick={this.actionHandler}>0</button>
+
                 </td>
                 {this.renderTdElement('num', '.', this.actionHandler)}
                 {this.renderTdElement('action', '=', this.actionHandler)}
