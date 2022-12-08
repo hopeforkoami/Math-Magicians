@@ -1,4 +1,4 @@
-import calculate from "../logic/calculate";
+import calculate from '../logic/calculate';
 
 describe('test for calculations', () => {
   test('testing with the result  Button', () => {
@@ -34,4 +34,4 @@ describe('test for calculations', () => {
       operation: null,
     });
   });
-})
+});

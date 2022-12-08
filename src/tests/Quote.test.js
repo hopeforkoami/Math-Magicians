@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { BrowserRouter as Router,} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Quote from '../pages/Quote';
 
 test('render Quote component', () => {
