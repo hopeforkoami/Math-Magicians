@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Quote component 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <header>
+      <div
+        class="project_title"
+      >
+        Math Magicians
+      </div>
+      <nav>
+        <ul
+          class="menu"
+        >
+          <a
+            href="/"
+          >
+            <li
+              class="menu_element start_menu_element selected_menu_element"
+            >
+              Home
+            </li>
+          </a>
+          <a
+            href="/calcul"
+          >
+            <li
+              class="menu_element"
+            >
+              Calculator
+            </li>
+          </a>
+          <a
+            href="/quote"
+          >
+            <li
+              class="menu_element"
+            >
+              Quote
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section
+      class="section quote_section"
+    >
+      <div
+        class="section_content"
+      >
+        <p
+          class="quote_citation"
+        >
+          Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston.
+        </p>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
