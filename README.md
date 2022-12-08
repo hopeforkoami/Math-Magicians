@@ -107,9 +107,9 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using:
+You can check the deployment of this project using:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="[#readme-top](https://math-magician-react-tceg.onrender.com)">render</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
